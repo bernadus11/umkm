@@ -1,0 +1,203 @@
+/* 
+    Warung Salatiga Custom CSS
+    Theme: Warm colors representing food (orange, brown, cream)
+*/
+
+:root {
+    --primary-orange: #f97316;
+    --primary-orange-hover: #ea580c;
+    --cream-bg: #fdf8f5;
+    --dark-brown: #431407;
+    --muted-brown: #78350f;
+    --secondary-brown: #6b21a8;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark-brown);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Base Utility Classes Overrides */
+.text-primary-color { color: var(--primary-orange) !important; }
+.bg-primary { background-color: var(--primary-orange) !important; }
+.btn-primary { 
+    background-color: var(--primary-orange); 
+    border-color: var(--primary-orange); 
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--primary-orange-hover);
+    border-color: var(--primary-orange-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--primary-orange);
+    border-color: var(--primary-orange);
+    transition: all 0.3s ease;
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.text-dark-brown { color: var(--dark-brown) !important; }
+.text-muted-brown { color: var(--muted-brown) !important; }
+.bg-cream { background-color: var(--cream-bg) !important; }
+.text-cream { color: var(--cream-bg) !important; }
+.bg-dark-brown { background-color: var(--dark-brown) !important; }
+
+.btn-outline-dark-brown {
+    color: var(--dark-brown);
+    border-color: var(--dark-brown);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+.btn-outline-dark-brown:hover {
+    background-color: var(--dark-brown);
+    color: var(--cream-bg);
+    transform: translateY(-2px);
+}
+
+.tracking-wide { letter-spacing: 2px; }
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.3s ease;
+}
+.navbar.scrolled {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+}
+.navbar-nav .nav-link {
+    color: var(--dark-brown);
+    font-weight: 500;
+    transition: color 0.3s;
+    padding-right: 1.2rem !important;
+    padding-left: 1.2rem !important;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--primary-orange);
+}
+.cta-btn {
+    border-width: 2px;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    position: relative;
+    background: linear-gradient(135deg, var(--cream-bg) 0%, rgba(253,248,245,0.7) 100%), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=1920') no-repeat center right;
+    background-size: cover;
+}
+.hero-text-col {
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+/* About Section */
+.about-img {
+    transition: transform 0.5s ease;
+}
+.about-img:hover {
+    transform: scale(1.02);
+}
+
+/* Product Cards */
+.product-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: center;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(67, 20, 7, 0.1) !important;
+}
+.card-img-wrapper {
+    overflow: hidden;
+}
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Custom Nav Pills for Menu */
+.custom-nav-pills .nav-link {
+    color: var(--dark-brown);
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.custom-nav-pills .nav-link.active {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+/* Small Order Button */
+.order-btn-sm {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.order-btn-sm:hover {
+    transform: rotate(90deg);
+}
+
+/* Forms */
+.form-custom::placeholder {
+    color: rgba(253, 248, 245, 0.5);
+}
+.form-custom:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary-orange);
+    box-shadow: none;
+    color: white;
+}
+
+/* Footer elements */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--cream-bg);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.social-icon:hover {
+    background-color: var(--primary-orange);
+    color: white;
+    transform: translateY(-3px);
+}
+.footer-link:hover {
+    color: var(--primary-orange) !important;
+    opacity: 1 !important;
+}
+
+/* Toast Container (simulated cart notification) */
+.toast-container {
+    z-index: 1060;
+}
